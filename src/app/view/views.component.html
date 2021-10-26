@@ -1,0 +1,51 @@
+<h3 class="display-3" style="text-align: center">
+  Search for Github user information
+</h3>
+<div class="container">
+  <div>
+    <div class="col-sm-6">
+      <form>
+        <div class="form-group">
+          <label>User ID</label>
+          <input
+            type="text"
+            name="username"
+            class="form-control"
+            [(ngModel)]="userName"
+          />
+        </div>
+        <button type="button" class="btn btn-light">Reset</button
+        ><span>| </span>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          type="button"
+          (click)="search()"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<pre></pre>
+<div *ngIf="respones">
+  <table id="customers">
+    <tr>
+      <th>Name</th>
+      <th>User Id</th>
+      <th>Public repos</th>
+      <th>Location</th>
+      <th>Followers</th>
+      <th>Company</th>
+    </tr>
+    <tr>
+      <td>{{ respones.name }}</td>
+      <td>{{ userName }}</td>
+      <td>{{ respones.public_repos }}</td>
+      <td>{{ respones.location }}</td>
+      <td>{{ respones.followers }}</td>
+      <td>{{ respones.company }}</td>
+    </tr>
+  </table>
+</div>

@@ -14,7 +14,8 @@
             [(ngModel)]="userName"
           />
         </div>
-        <button type="button" class="btn btn-light">Reset</button
+        <button type="button" class="btn btn-light" [disabled]="!userName"
+          (click)="reset()">Reset</button
         ><span>| </span>
         <button
           type="submit"

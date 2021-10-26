@@ -15,6 +15,12 @@ export class ViewsComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {}
+  
+  reset() {
+    this.respones = !this.respones;
+    this.userName = '';
+  }
+
 
   search() {
     this.http
